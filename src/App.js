@@ -1,11 +1,18 @@
+import React, { Component } from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div>
+class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
       
-    </div>
-  );
+    }
+  }
+
+  render() {
+    return (<></>)
+  }
 }
 
 export default App;
