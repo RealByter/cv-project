@@ -6,7 +6,18 @@ class App extends Component {
     super(props);
 
     this.state = {
-      
+      personal: {
+        firstName: '',
+        lastName: '',
+        email: '',
+        phoneNumber: ''
+      },
+      education: [
+        
+      ],
+      experience: [
+        
+      ]
     }
   }
 
