@@ -2,28 +2,27 @@ import React, { Component } from 'react';
 import './App.css';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
+	constructor(props) {
+		super(props);
 
-    this.state = {
-      personal: {
-        firstName: '',
-        lastName: '',
-        email: '',
-        phoneNumber: ''
-      },
-      education: [
-        
-      ],
-      experience: [
-        
-      ]
-    }
-  }
+		this.state = {
+			personal: {
+				firstName: '',
+				lastName: '',
+				email: '',
+				phoneNumber: '',
+			},
+			education: [],
+			experience: [],
+		};
+	}
 
-  render() {
-    return (<></>)
-  }
+	render() {
+		return (
+			<>
+			</>
+		);
+	}
 }
 
 export default App;
