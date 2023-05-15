@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Form from './components/layout/Form';
 
 class App extends Component {
 	constructor(props) {
@@ -15,11 +16,18 @@ class App extends Component {
 			education: [],
 			experience: [],
 		};
+
+    this.onChange = this.onChange.bind(this);
+	}
+
+	onChange(value) {
+		this.setState(value);
 	}
 
 	render() {
 		return (
 			<>
+				<Form value={this.state} onChange={this.onChange} />
 			</>
 		);
 	}
