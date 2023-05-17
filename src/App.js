@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Form from './components/layout/Form';
+import Preview from './components/layout/Preview';
 
 class App extends Component {
 	constructor(props) {
@@ -13,11 +14,11 @@ class App extends Component {
 				email: '',
 				phoneNumber: '',
 			},
-			education: [],
 			experience: [],
+			education: [],
 		};
 
-    this.onChange = this.onChange.bind(this);
+		this.onChange = this.onChange.bind(this);
 	}
 
 	onChange(value) {
@@ -28,6 +29,7 @@ class App extends Component {
 		return (
 			<>
 				<Form value={this.state} onChange={this.onChange} />
+				<Preview info={this.state} />
 			</>
 		);
 	}
