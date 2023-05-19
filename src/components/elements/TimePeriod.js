@@ -4,7 +4,7 @@ import MainSubText from './MainSubText';
 class TimePeriod extends Component {
 	render() {
 		return (
-			<div className="flex-row">
+			<div className="time-period">
 				<p>
 					{this.props.from} - {this.props.to}
 				</p>
