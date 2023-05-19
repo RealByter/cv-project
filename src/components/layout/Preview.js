@@ -47,10 +47,14 @@ class Preview extends Component {
 					</div>
 				</div>
 				<div className="personal">
-					<h3>Personal Details</h3>
-					<Linebreak />
-					<MainSubText main="Phone Number" sub={personal.phoneNumber} />
-					<MainSubText main="Email" sub={personal.email} />
+					<div>
+						<h3>Personal Details</h3>
+						<Linebreak />
+					</div>
+					<div>
+						<MainSubText main="Phone Number" sub={personal.phoneNumber} />
+						<MainSubText main="Email" sub={personal.email} />
+					</div>
 				</div>
 			</div>
 		);
