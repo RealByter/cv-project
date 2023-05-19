@@ -98,9 +98,8 @@ class Form extends Component {
 				<div>
 					<h2>Experience</h2>
 					{this.props.value.experience.map((edu, i) => (
-						<div>
+						<div key={i}>
 							<ExperienceForm
-								key={i}
 								onChange={value => this.onExperienceChange(i, value)}
 								value={edu}
 							/>
@@ -116,9 +115,8 @@ class Form extends Component {
 				<div>
 					<h2>Education</h2>
 					{this.props.value.education.map((exp, i) => (
-						<div>
+						<div key={i}>
 							<EducationForm
-								key={i}
 								onChange={value => this.onEducationChange(i, value)}
 								value={exp}
 							/>
