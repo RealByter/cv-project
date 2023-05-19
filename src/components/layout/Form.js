@@ -87,36 +87,50 @@ class Form extends Component {
 
 	render() {
 		return (
-			<div className='form'>
-				<h2>Personal Information</h2>
-				<PersonalForm
-					value={this.props.value.personal}
-					onChange={this.onPersonalChange}
-				/>
-				<h2>Experience</h2>
-				{this.props.value.experience.map((edu, i) => (
-					<>
-						<ExperienceForm
-							key={i}
-							onChange={value => this.onExperienceChange(i, value)}
-							value={edu}
-						/>
-						<Button text="Delete" delete onClick={e => this.removeExperience(e, i)} />
-					</>
-				))}
-				<Button text="Add" onClick={this.addExperience} />
-				<h2>Education</h2>
-				{this.props.value.education.map((exp, i) => (
-					<>
-						<EducationForm
-							key={i}
-							onChange={value => this.onEducationChange(i, value)}
-							value={exp}
-						/>
-						<Button text="Delete" delete onClick={e => this.removeEducation(e, i)} />
-					</>
-				))}
-				<Button text="Add" onClick={this.addEducation} />
+			<div className="form">
+				<div>
+					<h2>Personal Information</h2>
+					<PersonalForm
+						value={this.props.value.personal}
+						onChange={this.onPersonalChange}
+					/>
+				</div>
+				<div>
+					<h2>Experience</h2>
+					{this.props.value.experience.map((edu, i) => (
+						<div>
+							<ExperienceForm
+								key={i}
+								onChange={value => this.onExperienceChange(i, value)}
+								value={edu}
+							/>
+							<Button
+								text="Delete"
+								delete
+								onClick={e => this.removeExperience(e, i)}
+							/>
+						</div>
+					))}
+					<Button text="Add" onClick={this.addExperience} />
+				</div>
+				<div>
+					<h2>Education</h2>
+					{this.props.value.education.map((exp, i) => (
+						<div>
+							<EducationForm
+								key={i}
+								onChange={value => this.onEducationChange(i, value)}
+								value={exp}
+							/>
+							<Button
+								text="Delete"
+								delete
+								onClick={e => this.removeEducation(e, i)}
+							/>
+						</div>
+					))}
+					<Button text="Add" onClick={this.addEducation} />
+				</div>
 			</div>
 		);
 	}
