@@ -109,6 +109,16 @@ form {
   }
 }
 
+.preview > div {
+  padding: 1rem;
+}
+
+.preview > div > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .header {
   grid-area: header;
   background-color: #143e72;
@@ -129,5 +139,23 @@ form {
 .name {
   color: white;
   font-size: 3rem;
-  margin-left: 1rem;
+}
+
+.preview h3 {
+  color: #143e72;
+}
+
+.linebreak {
+  background-color: #cecece;
+  height: 1px;
+  align-self: stretch;
+}
+
+.time-period {
+  display: flex;
+}
+
+.main-sub-text {
+  display: flex;
+  flex-direction: column;
 }
