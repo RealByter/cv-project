@@ -91,3 +91,31 @@ form {
   flex-direction: column;
   gap: 0.5rem;
 }
+
+.preview {
+  width: 55vw;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  margin: 0 auto;
+  display: grid;
+  grid-template: "header header" 5rem
+                 "general personal"
+                 / 3fr 1fr;
+}
+
+@media (max-width:881px) {
+  .preview {
+    width: 100vw;
+  }
+}
+
+.header {
+  grid-area: header;
+}
+
+.general {
+  grid-area: general;
+}
+
+.personal {
+  grid-area: personal;
+}
