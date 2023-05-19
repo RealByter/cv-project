@@ -30,6 +30,12 @@ body {
   gap: 2rem;
 }
 
+@media (max-width:881px) {
+  .form {
+    width: 100vw;
+  }
+}
+
 .button {
   display: block;
   margin: 0.5rem auto;
