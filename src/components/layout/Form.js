@@ -13,6 +13,8 @@ class Form extends Component {
 		this.onEducationChange = this.onEducationChange.bind(this);
 		this.addExperience = this.addExperience.bind(this);
 		this.addEducation = this.addEducation.bind(this);
+		this.removeExperience = this.removeExperience.bind(this);
+		this.removeEducation = this.removeEducation.bind(this);
 	}
 
 	onPersonalChange(value) {
@@ -54,6 +56,15 @@ class Form extends Component {
 		});
 	}
 
+	removeExperience(e, index) {
+		const newArr = [...this.props.value.experience];
+		newArr.splice(index, 1);
+
+		this.props.onChange({
+			experience: newArr,
+		});
+	}
+
 	addEducation(e) {
 		this.props.onChange({
 			education: this.props.value.education.concat({
@@ -62,6 +73,15 @@ class Form extends Component {
 				from: '',
 				to: '',
 			}),
+		});
+	}
+
+	removeEducation(e, index) {
+		const newArr = [...this.props.value.education];
+		newArr.splice(index, 1);
+
+		this.props.onChange({
+			education: newArr,
 		});
 	}
 
@@ -75,20 +95,26 @@ class Form extends Component {
 				/>
 				<h2>Experience</h2>
 				{this.props.value.experience.map((edu, i) => (
-					<ExperienceForm
-						key={i}
-						onChange={value => this.onExperienceChange(i, value)}
-						value={edu}
-					/>
+					<>
+						<ExperienceForm
+							key={i}
+							onChange={value => this.onExperienceChange(i, value)}
+							value={edu}
+						/>
+						<Button text="Delete" onClick={e => this.removeExperience(e, i)} />
+					</>
 				))}
 				<Button text="Add" onClick={this.addExperience} />
 				<h2>Education</h2>
 				{this.props.value.education.map((exp, i) => (
-					<EducationForm
-						key={i}
-						onChange={value => this.onEducationChange(i, value)}
-						value={exp}
-					/>
+					<>
+						<EducationForm
+							key={i}
+							onChange={value => this.onEducationChange(i, value)}
+							value={exp}
+						/>
+						<Button text="Delete" onClick={e => this.removeEducation(e, i)} />
+					</>
 				))}
 				<Button text="Add" onClick={this.addEducation} />
 			</div>
