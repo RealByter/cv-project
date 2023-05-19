@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import './normalize.css';
+import './reset.css'
 import './App.css';
 import Form from './components/layout/Form';
 import Preview from './components/layout/Preview';
@@ -28,6 +30,7 @@ class App extends Component {
 	render() {
 		return (
 			<>
+        <h1 className="page-title">CV CREATOR</h1>
 				<Form value={this.state} onChange={this.onChange} />
 				<Preview info={this.state} />
 			</>

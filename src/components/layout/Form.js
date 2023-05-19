@@ -87,7 +87,7 @@ class Form extends Component {
 
 	render() {
 		return (
-			<div>
+			<div className='form'>
 				<h2>Personal Information</h2>
 				<PersonalForm
 					value={this.props.value.personal}
