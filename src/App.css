@@ -97,9 +97,10 @@ form {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
   margin: 0 auto;
   display: grid;
-  grid-template: "header header" 5rem
+  grid-template: "header header" 7.5rem
                  "general personal"
                  / 3fr 1fr;
+  height: 55rem;
 }
 
 @media (max-width:881px) {
@@ -110,12 +111,23 @@ form {
 
 .header {
   grid-area: header;
+  background-color: #143e72;
+  display: flex;
+  align-items: center;
 }
 
 .general {
   grid-area: general;
+  background-color: #eeeeee;
 }
 
 .personal {
   grid-area: personal;
+  background-color: #dddddd;
+}
+
+.name {
+  color: white;
+  font-size: 3rem;
+  margin-left: 1rem;
 }

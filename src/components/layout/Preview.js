@@ -10,7 +10,7 @@ class Preview extends Component {
 		return (
 			<div className="preview">
 				<div className='header'>
-					<h1>
+					<h1 className='name'>
 						{personal.firstName} {personal.lastName}
 					</h1>
 				</div>
