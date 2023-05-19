@@ -101,7 +101,7 @@ class Form extends Component {
 							onChange={value => this.onExperienceChange(i, value)}
 							value={edu}
 						/>
-						<Button text="Delete" onClick={e => this.removeExperience(e, i)} />
+						<Button text="Delete" delete onClick={e => this.removeExperience(e, i)} />
 					</>
 				))}
 				<Button text="Add" onClick={this.addExperience} />
@@ -113,7 +113,7 @@ class Form extends Component {
 							onChange={value => this.onEducationChange(i, value)}
 							value={exp}
 						/>
-						<Button text="Delete" onClick={e => this.removeEducation(e, i)} />
+						<Button text="Delete" delete onClick={e => this.removeEducation(e, i)} />
 					</>
 				))}
 				<Button text="Add" onClick={this.addEducation} />

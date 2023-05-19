@@ -1,5 +1,5 @@
 body {
-	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-family: Nunito, sans-serif;
 	background-color: #cccccc;
 	text-align: center;
 	font-size: 16px;
@@ -21,4 +21,35 @@ body {
   border-radius: 5px;
   margin: 2rem auto;
   width: 55vw;
+}
+
+.button {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: .75rem 0;
+  font-weight: 700;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button-green {
+  background-color: #1ba148;
+}
+
+.button-green:hover {
+  background-color: #0a9037;
+}
+
+.button-red {
+  background-color: #b3211e;
+}
+
+.button-red:hover {
+  background-color: #a2100d;
 }
